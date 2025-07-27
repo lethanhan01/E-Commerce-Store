@@ -2,7 +2,6 @@ import React from "react";
 import Amazon from "./Cartcomponents/amazon";
 import Navbar from "./Cartcomponents/Navbar";
 import { useState } from "react";
-import Shopcart from "./Cartcomponents/shopcart";
 import Cart from "./Cartcomponents/Cart";
 import "./Cartform.css";
 
