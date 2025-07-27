@@ -1,68 +1,377 @@
+/* Login and Signup Styles - Optimized for consistency */
+
+/* Login Form Styles */
 .sign-in-form {
-  width: 30%;
-  margin: 0 auto;
-  /* text-align: center; */
-  margin-top: 100px;
+  max-width: 400px;
+  width: 90%;
+  margin: 40px auto;
   position: relative;
-  animation: mymove 1.5s ease-in-out;
+  animation: slideInFromLeft 1.5s ease-in-out;
 }
 
-form {
+.sign-in-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f2f2f2;
+  background: white;
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9ecef;
 }
-@keyframes mymove {
+
+@keyframes slideInFromLeft {
   from {
-    left: -1500px;
+    transform: translateX(-100%);
+    opacity: 0;
   }
   to {
-    left: 0px;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-input[type="text"],
-input[type="password"] {
-  background-color: #f2f2f2;
+.sign-in-form input[type="text"],
+.sign-in-form input[type="password"] {
+  background-color: #fff;
   width: 100%;
-  padding: 10px;
-  color: black !important;
+  padding: 15px;
+  color: #2c3e50;
   margin-bottom: 20px;
   font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  color: black;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
-input {
-  color: black;
+
+.sign-in-form input[type="text"]:focus,
+.sign-in-form input[type="password"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
-/* input {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 5px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  width: 100%;
-  padding: 10px;
-} */
-label {
-  font-size: 20px;
-  color: rgb(68, 70, 72);
-}
-.loginbtn {
-  padding: 20px;
+
+.sign-in-form label {
   font-size: 18px;
-  border-radius: 20px;
-  color: white;
-  background-color: rgb(23, 40, 65);
-  cursor: pointer;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 8px;
+  align-self: flex-start;
+  width: 100%;
 }
-.error {
+
+.loginbtn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 120px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.loginbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.sign-in-form .error {
   margin-top: 20px;
-  font-size: 20px;
-  /* background-color: rgb(32, 167, 9); */
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Signup Styles */
+.signup-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.signup-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.signup-form-wrapper h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signup-subtitle {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 35px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input.error {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.success-message {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(21, 87, 36, 0.1);
+}
+
+.checkbox-group {
+  margin: 25px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+  margin-top: 2px;
+  transform: scale(1.2);
+  accent-color: #667eea;
+}
+
+.checkbox-label a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+  color: #5a67d8;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 30px;
+  color: #6c757d;
+  font-size: 1rem;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.login-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #5a67d8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sign-in-form {
+    width: 95%;
+    margin: 20px auto;
+  }
+  
+  .sign-in-form form {
+    padding: 30px 25px;
+  }
+  
+  .signup-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .signup-form-wrapper {
+    padding: 30px 25px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .signup-form-wrapper h2 {
+    font-size: 2rem;
+  }
+  
+  .signup-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-in-form {
+    width: 98%;
+    margin: 10px auto;
+  }
+  
+  .sign-in-form form {
+    padding: 25px 20px;
+  }
+  
+  .signup-container {
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .signup-form-wrapper {
+    padding: 25px 20px;
+  }
+  
+  .signup-form-wrapper h2 {
+    font-size: 1.8rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px;
+  }
+  
+  .signup-btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+  }
+  
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Form validation states */
+.form-group input:valid {
+  border-color: #28a745;
+}
+
+.form-group input:invalid:not(:focus) {
+  border-color: #dc3545;
+}
+
+/* Loading state */
+.signup-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.loginbtn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Enhanced form focus indicators */
+.form-group input:focus,
+.form-group select:focus,
+.sign-in-form input:focus {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
