@@ -24,8 +24,10 @@ const Privacy = () => {
                 </section>
 
                 <section className="privacy-section">
-                    <h2>2. How We Use Your Information</h2>
-                    <p>We use the information we collect to:</p>
+                    <h2>2. How We Use Your Information </h2>
+                    <p>
+                        We use the information we collect to:
+                    </p>
                     <ul>
                         <li>Process and fulfill your orders</li>
                         <li>Provide customer service and support</li>
@@ -73,6 +75,7 @@ const Privacy = () => {
 
                 <section className="privacy-section">
                     <h2>6. Terms of Service</h2>
+                    
                     <h3>Acceptance of Terms</h3>
                     <p>
                         By accessing and using our website, you accept and agree to be bound by 
