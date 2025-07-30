@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Loginform from './Loginform';
+import Loginform from '../Loginform';
 
 describe('Loginform Component', () => {
   test('renders login form', () => {

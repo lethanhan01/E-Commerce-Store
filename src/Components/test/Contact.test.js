@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Contact from './Contact';
+import Contact from '../Contact';
 
 describe('Contact Component', () => {
   test('renders contact page with header', () => {

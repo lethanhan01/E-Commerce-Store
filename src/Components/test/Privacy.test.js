@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Privacy from './Privacy';
+import Privacy from '../Privacy';
 
 describe('Privacy Component', () => {
   test('renders privacy policy page with main heading', () => {
