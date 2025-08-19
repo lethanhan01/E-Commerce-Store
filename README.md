@@ -1,229 +1,164 @@
+
 # E-Commerce Store
 
-> 🔎 Dự án web thương mại điện tử đầy đủ tính năng (catalog, giỏ hàng, thanh toán, quản trị…) với kiến trúc tách lớp, dễ mở rộng và triển khai. 
+> A modern React SPA for e‑commerce: home, product browsing, cart, signup, login, privacy policy, and contact. Responsive, accessible, and ready to extend.
 
-<!--
-Lưu ý dành cho tác giả:
-- Tìm & thay thế các đoạn viết IN HOA trong ngoặc vuông [NHƯ THẾ NÀY].
-- Nếu stack khác (ví dụ: Django, Laravel, Spring…), sửa mục “Công nghệ & Kiến trúc” và phần “Thiết lập nhanh” tương ứng.
--->
 
 ## 🔗 Demo / Preview
 
-* **Live**: [https://\[LINK-DEPLOY\]](https://e-commerce-store-2xzmgzp6l-lethanhan01s-projects.vercel.app/)
+* Live: [Vercel Deployment](https://e-commerce-store-2xzmgzp6l-lethanhan01s-projects.vercel.app/)
 
 ---
 
-## ✨ Tính năng chính
 
-* 🛍️ **Catalog sản phẩm**: danh mục, tag, biến thể (size/color), hình ảnh, tồn kho
-* 🔎 **Tìm kiếm & lọc**: theo tên, danh mục, giá, sắp xếp mới nhất/bán chạy/giá
-* 🧺 **Giỏ hàng & Wishlist**: thêm/xóa/cập nhật số lượng, lưu trạng thái người dùng
-* 💳 **Thanh toán**: tích hợp cổng thanh toán (ví dụ: Stripe/Momo/ZaloPay), hỗ trợ COD 
-* 📦 **Đơn hàng**: địa chỉ giao hàng, phí vận chuyển, trạng thái (pending/paid/shipped/delivered)
-* 🔐 **Xác thực & phân quyền**: đăng ký/đăng nhập, OAuth *(tuỳ chọn)*, JWT/Session, vai trò Admin/User
-* ♿ **Accessibility & SEO**: semantic HTML, meta tags, sitemap, robots
-* 📊 **Trang quản trị (Admin Dashboard)**: CRUD sản phẩm, quản lý đơn, doanh thu, tồn kho
+## ✨ Features
+
+* 🏠 Home: Intro, featured products, responsive hero section
+* 🔎 Product search: Filter by name/category/price, sorting
+* 🧺 Cart: Add/remove/update quantities, persistent state
+* 🔐 Auth forms: Signup/Login with validation and error messaging
+* 📄 Privacy Policy: Dedicated, well-structured page
+* 📬 Contact: Contact form, company info, FAQ, social links
+* 🖥️ Responsive design: Desktop, tablet, and mobile ready
+* 🎨 Modern UI/UX: Gradients, animations, typography, hover states
+* 🧪 Testing: 20+ test cases with React Testing Library + Jest
 
 ---
 
-## 🧱 Công nghệ & Kiến trúc
 
- **React/Next.js + Node.js + PostgreSQL + Prisma + Stripe**. 
+## 🧱 Tech Stack & Architecture
 
-* **Frontend**: Next.js (App Router), React 18, TanStack Query, Zustand/Redux, TailwindCSS
-* **Backend**: Node.js 20, NestJS/Express (chọn một), REST/GraphQL
-* **Database**: PostgreSQL, **ORM**: Prisma
-* **Auth**: NextAuth/Passport, JWT/Session cookies
-* **Payments**: Stripe (sandbox), mở rộng cổng VNPay/Momo/ZaloPay
-* **Storage**: S3 compatible (Cloudflare R2/MinIO) cho ảnh sản phẩm
-* **Caching**: Redis (session/cache rate-limits)
-* **Testing**: Vitest/Jest, Playwright
-* **CI/CD**: GitHub Actions
-* **Infra**: Docker Compose (Dev), Fly.io/Vercel/Railway/Render (Prod)
+* Frontend: React 19, React Router 6, Material-UI, CSS3 (component-scoped)
+* State: React Hooks (useState, useEffect), Context API
+* Testing: React Testing Library, Jest
+* Build: Create React App
+* Deployment: Vercel
 
-## 🚀 Thiết lập nhanh
 
-### 1) Yêu cầu hệ thống
+## 🚀 Quick Start
 
-* Node.js **>= 18** (khuyên dùng 20)
-* npm/pnpm/yarn (chọn một)
-* Docker Desktop *(tuỳ chọn, cho dev nhanh)*
+### 1) Requirements
 
-### 2) Clone mã nguồn
+* Node.js >= 18
+* npm
+
+### 2) Clone the repository
 
 ```bash
-git clone https://github.com/[USERNAME]/E-Commerce-Store.git
+git clone https://github.com/lethanhan01/E-Commerce-Store.git
 cd E-Commerce-Store
 ```
 
-### 3) Cấu hình biến môi trường
-
-Tạo file `.env` ở thư mục gốc (tham khảo mẫu dưới). Nếu tách frontend/backend, đặt tương ứng ở từng package.
-
-```dotenv
-# Database
-DATABASE_URL="postgresql://[USER]:[PASS]@[HOST]:5432/[DB_NAME]?schema=public"
-
-# Auth / App
-NEXTAUTH_SECRET="[GENERATE_A_STRONG_SECRET]"
-NEXTAUTH_URL="http://localhost:3000"
-JWT_SECRET="[JWT_SECRET]"
-
-# Stripe (nếu dùng)
-STRIPE_PUBLIC_KEY="pk_test_..."
-STRIPE_SECRET_KEY="sk_test_..."
-STRIPE_WEBHOOK_SECRET="whsec_..."
-
-# S3 Storage (nếu dùng)
-S3_ENDPOINT="https://[ENDPOINT]"
-S3_BUCKET="[BUCKET]"
-S3_ACCESS_KEY_ID="[KEY]"
-S3_SECRET_ACCESS_KEY="[SECRET]"
-```
-
-### 4) Cài đặt phụ thuộc & chạy dev
-
-> Với dự án monorepo (apps/**, packages/**), điều chỉnh lệnh theo workspace manager của bạn.
+### 3) Install & run (development)
 
 ```bash
-# cài đặt
 npm install
-# setup DB (Prisma)
-npx prisma migrate dev --name init
-npx prisma db seed  # nếu có seeding
-
-# chạy app
-npm run dev  # mặc định: http://localhost:3000
+npm start
 ```
 
-### 5) Build & chạy Production
+### 4) Build (production)
 
 ```bash
 npm run build
-npm run start
 ```
 
-### 6) Chạy nhanh bằng Docker (tuỳ chọn)
+### 5) Run tests
 
 ```bash
-# Dev (hot reload)
-docker compose -f docker-compose.dev.yml up --build
-# Prod
-docker compose up --build -d
+npm test
 ```
 
 ---
 
-## 🗂️ Cấu trúc thư mục (tham khảo)
 
-```
+## 🗂️ Project Structure
+
+```text
 E-Commerce-Store/
-├─ apps/
-│  ├─ web/                # Next.js frontend
-│  └─ api/                # Node/Nest/Express backend
-├─ prisma/
-│  ├─ schema.prisma
-│  └─ seed.ts
-├─ src/                   # hoặc packages/* nếu tách lib
-├─ public/                # ảnh tĩnh, favicon, logos
-├─ docs/                  # screenshots, diagrams
-├─ .env.example
-├─ docker-compose.yml
+├─ public/           # Static assets, favicon, logos
+├─ src/
+│  ├─ App.js         # Main router
+│  ├─ index.js       # Entry point
+│  ├─ Components/
+│  │   ├─ Home.jsx, Contact.jsx, Privacy.jsx, Signup.jsx, Loginform.jsx, Navbar.jsx
+│  │   ├─ Cartcomponents/   # Cart, shopcart, amazon
+│  │   ├─ images/           # Product images
+│  │   └─ styles/           # Component CSS
+│  └─ ...
 ├─ package.json
 └─ README.md
 ```
 
 ---
 
-## 🔌 API (ví dụ REST)
 
-> Nếu dùng GraphQL/ tRPC, thay bằng schema/queries tương ứng.
+## 🔌 API
 
-**Auth**
-
-* `POST /api/auth/register` – Đăng ký tài khoản
-* `POST /api/auth/login` – Đăng nhập (trả về token/session)
-
-**Sản phẩm**
-
-* `GET /api/products` – Danh sách + filter/sort/pagination
-* `GET /api/products/:id` – Chi tiết
-* `POST /api/products` *(admin)* – Tạo mới
-* `PATCH /api/products/:id` *(admin)* – Cập nhật
-* `DELETE /api/products/:id` *(admin)* – Xoá
-
-**Giỏ hàng & Đơn hàng**
-
-* `POST /api/cart` – Thêm/cập nhật/xoá item
-* `POST /api/orders` – Tạo đơn, khởi tạo thanh toán
-* `POST /api/payments/stripe/webhook` – Webhook xử lý trạng thái thanh toán
+This is a client‑only React SPA. Authentication, cart, and search are handled on the client. You can integrate a real backend/API later.
 
 ---
 
-## 🧪 Kiểm thử
+
+## 🧪 Testing
 
 ```bash
-# unit/integration
-npm run test
-# e2e (Playwright)
-npm run test:e2e
+npm test
 ```
 
 ---
 
-## 🔒 Bảo mật
 
-* Lưu Secrets bằng **.env**, không commit lên repo công khai
-* CSRF/XSS/SQL Injection: bật `helmet`, escape inputs, dùng prepared statements/ORM
-* Rate limit cho tuyến nhạy cảm (auth/payment)
-* HTTPS ở production, `SameSite` cho cookies
+## 🔒 Security
 
----
-
-## 📈 Hiệu năng & SEO
-
-* Image Optimization, lazy-loading, caching
-* ISR/SSG (Next.js) cho trang tĩnh, `sitemap.xml`, `robots.txt`
-* Lighthouse ≥ 90 (Performance/Accessibility/Best Practices/SEO)
+* Do not store sensitive data on the client
+* Validate all inputs and display clear error messages
+* Use HTTPS and secure headers when adding a backend
 
 ---
 
-## 🛠️ Scripts hữu ích 
+
+## 📈 Performance & SEO
+
+* Optimize images and apply lazy-loading where applicable
+* Semantic HTML and helpful meta tags
+* Fully responsive; Lighthouse targets > 90
+
+---
+
+
+## 🛠️ Scripts
 
 ```json
 {
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "test": "vitest",
-    "test:e2e": "playwright test",
-    "prisma:studio": "prisma studio",
-    "prisma:migrate": "prisma migrate dev"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }
 ```
 
 ---
 
+
 ## 🧭 Roadmap
 
-* [ ] Đa phương thức thanh toán (VNPay/Momo/ZaloPay)
-* [ ] Đa ngôn ngữ (vi, en)
-* [ ] Email service (Xác nhận đơn, khôi phục mật khẩu)
-* [ ] Đánh giá & bình luận sản phẩm
-* [ ] Tối ưu Core Web Vitals
+* [ ] Integrate real backend/API
+* [ ] Add payments
+* [ ] Internationalization (vi, en)
+* [ ] Product reviews & comments
+* [ ] Core Web Vitals improvements
 
 ---
 
-## 🤝 Đóng góp
 
-Đóng góp được hoan nghênh! Vui lòng mở **Issue** để thảo luận trước, sau đó gửi **Pull Request** theo template.
+## 🤝 Contributing
+
+Contributions are welcome! Please open an Issue to discuss before submitting a Pull Request.
 
 ---
+
 
 ## 📄 License
 
@@ -231,9 +166,10 @@ npm run test:e2e
 
 ---
 
-## 📬 Liên hệ
 
-* Tác giả: **Lê Thành An**
-* Email: **\[An.LT235631@sis.hust.edu.vn]**
+## 📬 Contact
+
+* Author: **Le Thanh An**
+* Email: [An.LT235631@sis.hust.edu.vn](mailto:An.LT235631@sis.hust.edu.vn)
 
 ---
