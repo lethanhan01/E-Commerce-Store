@@ -25,9 +25,11 @@ const Privacy = () => {
 
                 <section className="privacy-section">
                     <h2>2. How We Use Your Information </h2>
+                    
                     <p>
                         We use the information we collect to:
                     </p>
+                    
                     <ul>
                         <li>Process and fulfill your orders</li>
                         <li>Provide customer service and support</li>
@@ -63,7 +65,9 @@ const Privacy = () => {
 
                 <section className="privacy-section">
                     <h2>5. Your Rights</h2>
-                    <p>You have the right to:</p>
+                    <p>
+                        You have the right to:
+                    </p>
                     <ul>
                         <li>Access and update your personal information</li>
                         <li>Request deletion of your account and data</li>

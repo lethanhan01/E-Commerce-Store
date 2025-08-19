@@ -91,20 +91,20 @@ const Contact = () => {
                     
                     <div className="info-item">
                         <h3>📍 Address</h3>
-                        <p>123 Beauty Boulevard<br />Skincare City, SC 12345<br />United States</p>
+                        <p>1 Dai Co Viet<br /> Hanoi University of Science and Technology<br />Bach Mai, Hai Ba Trung, Hanoi <br />Vietnam</p>
                     </div>
 
                     <div className="info-item">
                         <h3>📞 Phone</h3>
-                        <p>Customer Service: 1-800-REFRESH (1-800-733-7374)<br />
+                        <p>Customer Service: +84-REFRESH (+84-865-797-312)<br />
                         Business Hours: Monday - Friday, 9 AM - 6 PM EST</p>
                     </div>
 
                     <div className="info-item">
                         <h3>📧 Email</h3>
-                        <p>General Inquiries: info@refresh-skincare.com<br />
-                        Customer Support: support@refresh-skincare.com<br />
-                        Business Partnerships: partners@refresh-skincare.com</p>
+                        <p>General Inquiries: An.LT235631@sis.hust.edu <br />
+                        Customer Support: An.LT235631@sis.hust.edu <br />
+                        Business Partnerships: An.LT235631@sis.hust.edu </p>
                     </div>
 
                     <div className="info-item">

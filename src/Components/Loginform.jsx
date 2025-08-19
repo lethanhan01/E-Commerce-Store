@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./Loginup.css";
+import "./Signup.css";
 
 const account1 = {
   username: "Anle",
