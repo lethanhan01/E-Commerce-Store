@@ -127,9 +127,9 @@ const Privacy = () => {
                         please contact us:
                     </p>
                     <div className="contact-info">
-                        <p><strong>Email:</strong> privacy@refresh-skincare.com</p>
-                        <p><strong>Phone:</strong> 1-800-REFRESH (1-800-733-7374)</p>
-                        <p><strong>Address:</strong> 123 Beauty Boulevard, Skincare City, SC 12345</p>
+                        <p><strong>Email:</strong> An.LT235631@sis.hust.edu.vn</p>
+                        <p><strong>Phone:</strong>  (+84)865-797-312</p>
+                        <p><strong>Address:</strong> 1, DaiCoViet, BachMai, HaiBaTrung, Vietnam</p>
                     </div>
                 </section>
 

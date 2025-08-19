@@ -3,12 +3,12 @@ import { useState } from "react";
 import "./Loginup.css";
 
 const account1 = {
-  username: "Carlos",
-  pin: 1111,
+  username: "Anle",
+  pin: 1804,
 };
 const account2 = {
-  username: "Steven",
-  pin: 2222,
+  username: "Nhile",
+  pin: 2601,
 };
 const account3 = {
   username: "Jessica",
